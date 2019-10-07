@@ -15,5 +15,5 @@ const router = new director.http.Router({
 const devMode = process.argv[2] === '--dev';
 
 // Start listening
-const server = new Server(router, devMode);
+const server = new Server(router, devMode, process.env.PORT);
 server.serve();
